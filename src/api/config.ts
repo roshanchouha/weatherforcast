@@ -1,0 +1,11 @@
+export const API_CONFIG = {
+    BASE_URL: 'https://api.openweathermap.org/data/2.5',
+    API_KEY: import.meta.env.VITE_WHETHER_API_KEY,
+    GEO: 'https://api.openweathermap.org/geo/1.0',
+    DEFAULT_PARAMS: {
+        units: 'metric',
+        lang: 'en',
+        appid: import.meta.env.VITE_WHETHER_API_KEY,
+    },
+
+}
