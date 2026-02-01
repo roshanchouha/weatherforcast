@@ -55,45 +55,45 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                                         <span className='flex item-center gap-1 text-red-500'>
                                             <ArrowUp className='h-4 w-4' /> {formatTemp(temp_max)}
                                         </span>
-                         
+
 
                                     </div>
                                 </div>
                             </div>
 
-                             <div className='grid grid-cols-2 gap-4'>
-                                 <div className='flex gap-2 justify-center'> 
+                            <div className='grid grid-cols-2 gap-4'>
+                                <div className='flex gap-2 justify-center'>
                                     <Droplet className='w-4 h-4 text-blue-500' />
-                                     <div className='space-y-0.5'>
+                                    <div className='space-y-0.5'>
                                         <p className='text-sm font-medium'> Humidity</p>
-                                         <p className='text-sm text-muted-foreground'>{humidity}%</p>
-                                     </div>
-                                 </div>
-
-                                   <div className='flex gap-2 justify-center'> 
-                                    <Wind className='w-4 h-4 text-blue-500' />
-                                     <div className='space-y-0.5'>
-                                        <p className='text-sm font-medium'> Wind</p>
-                                         <p className='text-sm text-muted-foreground'>{windSpeed}%</p>
-                                     </div>
-                                 </div>
-                             </div>      
-                        </div>
-                         <div className='flex flex-col items-center justify-center'>
-                                <div className='relative flex aspect-square w-full max-w-[200px] item-center justify-center'>
-                                    <img src={`https://openweathermap.org/img/wn/${currentWeather.icon}@4x.png`} alt="weather image"  className='w-full h-full object-contain'/>
-                                    <div className='absolute bottom-0 text-center'>
-                                        <p className='text-sm font-medium capitalize '>
-                                            {currentWeather.description}
-                                        </p>
-
+                                        <p className='text-sm text-muted-foreground'>{humidity}%</p>
                                     </div>
                                 </div>
-                             </div>
+
+                                <div className='flex gap-2 justify-center'>
+                                    <Wind className='w-4 h-4 text-blue-500' />
+                                    <div className='space-y-0.5'>
+                                        <p className='text-sm font-medium'> Wind</p>
+                                        <p className='text-sm text-muted-foreground'>{windSpeed}%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex flex-col items-center justify-center'>
+                            <div className='relative flex aspect-square w-full max-w-[200px] item-center justify-center'>
+                                <img src={`https://openweathermap.org/img/wn/${currentWeather.icon}@4x.png`} alt="weather image" className='w-full h-full object-contain' />
+                                <div className='absolute bottom-0 text-center'>
+                                    <p className='text-sm font-medium capitalize '>
+                                        {currentWeather.description}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
-                    
+
                 </CardContent>
 
             </Card>

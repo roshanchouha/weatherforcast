@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTheme } from '../context/theme-provider'
 import { Moon, Sun } from 'lucide-react';
+import CitySearch from './city-search';
 
 const Header = () => {
     const { theme, setTheme } = useTheme();
@@ -12,9 +13,12 @@ const Header = () => {
                 <Link to='/'>
                     <img className='w-[150px] h-[100px]' src={isDark ? "/darkLogo.png" : "/lightLogo.png"} alt="logo" />
                 </Link>
-                <div onClick={() => setTheme(isDark ? 'light' : 'dark')}
-                    className={`flex items-center cursor-pointer transition-transform duration-500 ${isDark ? 'rotate-180' : 'rotate-0'}`}>
-                    {isDark ? <Sun className="w-6 h-6 text-yellow-500 rotate-0 transition-all" /> : <Moon className="w-6 h-6 text-blue-500 rotate-0 transition-all" />}
+                <div className='flex gap-4'>
+                    <CitySearch />
+                    <div onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                        className={`flex items-center cursor-pointer transition-transform duration-500 ${isDark ? 'rotate-180' : 'rotate-0'}`}>
+                        {isDark ? <Sun className="w-6 h-6 text-yellow-500 rotate-0 transition-all" /> : <Moon className="w-6 h-6 text-blue-500 rotate-0 transition-all" />}
+                    </div>
                 </div>
 
             </div>
