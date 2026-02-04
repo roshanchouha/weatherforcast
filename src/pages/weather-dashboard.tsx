@@ -23,7 +23,7 @@ const WeatherDashboard = () => {
     const locationName = locationData.data?.length ? locationData.data[0].name : 'Unknown Location';
     console.log("locationName", locationName);
 
-
+    console.log("locationDAta", locationData.data)
 
     const handleRefresh = () => {
         if (coordinates) {
